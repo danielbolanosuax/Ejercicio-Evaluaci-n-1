@@ -1,0 +1,14 @@
+def agregar_item(inventario, item):
+    if item in inventario:
+        raise ValueError("El ítem ya está en el inventario.")
+    inventario.append(item)
+    return inventario
+
+# Ejemplo de uso
+inventario = ["espada", "escudo", "poción"]
+try:
+    agregar_item(inventario, "arco")
+    print(inventario)
+    agregar_item(inventario, "espada")
+except ValueError as e:
+    print(e)
